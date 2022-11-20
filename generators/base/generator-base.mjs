@@ -2438,13 +2438,14 @@ templates: ${JSON.stringify(existingTemplates, null, 2)}`;
     dest.buildToolUnknown = !dest.buildToolGradle && !dest.buildToolMaven;
     dest.buildDir = this.getBuildDirectoryForBuildTool(dest.buildTool);
 
-    dest.cacheProviderNo = dest.cacheProvider === NO_CACHE;
+    dest.cacheProviderNo = !dest.cacheProvider || dest.cacheProvider === NO_CACHE;
     dest.cacheProviderCaffeine = dest.cacheProvider === CAFFEINE;
     dest.cacheProviderEhCache = dest.cacheProvider === EHCACHE;
     dest.cacheProviderHazelcast = dest.cacheProvider === HAZELCAST;
     dest.cacheProviderInfinispan = dest.cacheProvider === INFINISPAN;
     dest.cacheProviderMemcached = dest.cacheProvider === MEMCACHED;
     dest.cacheProviderRedis = dest.cacheProvider === REDIS;
+    dest.cacheProviderAny = !dest.cacheProviderNo;
 
     dest.devDatabaseTypeH2Disk = dest.devDatabaseType === H2_DISK;
     dest.devDatabaseTypeH2Memory = dest.devDatabaseType === H2_MEMORY;

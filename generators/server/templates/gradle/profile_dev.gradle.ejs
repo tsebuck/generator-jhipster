@@ -38,7 +38,7 @@ dependencies {
   <%_ if (devDatabaseTypeMysql) { _%>
     <%_ if (reactive) { _%>
     // TODO spring-data-r2dbc is not managing r2dbc-mariadb version
-    implementation ("org.mariadb:r2dbc-mariadb:1.1.2")
+    implementation ("org.mariadb:r2dbc-mariadb:1.1.3")
     <%_ } _%>
     implementation "mysql:mysql-connector-java"
     liquibaseRuntime "mysql:mysql-connector-java"

@@ -21,6 +21,7 @@
  EJS fragments will process % delimiter tags in template and & delimiter tags in the merge process.
 -%>
 <&_ if (fragment.staticImportSection) { -&>
+// trigger ci
 <%_ if (!embedded) { _%>
 import static <%= packageName %>.config.Constants.ID_DELIMITER;
 import static <%= packageName %>.domain.<%= persistClass %>.TYPE_NAME;

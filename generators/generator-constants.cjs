@@ -16,11 +16,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const validationOptions = require('../jdl/jhipster/validations');
-const databaseTypes = require('../jdl/jhipster/database-types');
-const { ANGULAR, REACT, VUE } = require('../jdl/jhipster/client-framework-types');
-const commonPackageJson = require('./common/templates/package.json');
-
 // Version of Java
 const JAVA_VERSION = '17';
 const JAVA_COMPATIBLE_VERSIONS = ['17', '18', '19'];
@@ -33,7 +28,7 @@ const javaDependencies = {};
 Object.freeze(javaDependencies);
 
 // The version should be coherent with the one from spring-data-elasticsearch project
-const ELATICSEARCH_TAG = '7.17.4';
+const ELATICSEARCH_TAG = '8.5.3';
 const ELATICSEARCH_IMAGE = 'docker.elastic.co/elasticsearch/elasticsearch';
 
 /**
@@ -53,9 +48,9 @@ const OPENAPI_GENERATOR_CLI_VERSION = '2.5.1';
 // Libraries version
 const JHIPSTER_DEPENDENCIES_VERSION = '8.0.0-SNAPSHOT';
 // The spring-boot version should match the one managed by https://mvnrepository.com/artifact/tech.jhipster/jhipster-dependencies/JHIPSTER_DEPENDENCIES_VERSION
-const SPRING_BOOT_VERSION = '3.0.0';
-const SPRING_CLOUD_VERSION = '2022.0.0-RC2';
-const HIBERNATE_VERSION = '6.1.5.Final';
+const SPRING_BOOT_VERSION = '3.0.1';
+const SPRING_CLOUD_VERSION = '2022.0.0';
+const HIBERNATE_VERSION = '6.1.6.Final';
 const JACOCO_VERSION = '0.8.8';
 const JACKSON_DATABIND_NULLABLE_VERSION = '0.2.4';
 
@@ -91,69 +86,9 @@ const TEST_DIR = 'src/test/';
 // Note: this will be prepended with 'target/classes' for Maven, or with 'build/resources/main' for Gradle.
 const CLIENT_DIST_DIR = 'static/';
 
-const SUPPORTED_VALIDATION_RULES = Object.keys(validationOptions)
-  .map(key => validationOptions[key])
-  .filter(e => typeof e === 'string');
-
-const SUPPORTED_CLIENT_FRAMEWORKS = {
-  ANGULAR,
-  REACT,
-  VUE,
-};
-
 // documentation constants
 const JHIPSTER_DOCUMENTATION_URL = 'https://www.jhipster.tech';
 const JHIPSTER_DOCUMENTATION_ARCHIVE_PATH = '/documentation-archive/';
-
-const OFFICIAL_DATABASE_TYPE_NAMES = {
-  cassandra: 'Cassandra',
-  couchbase: 'Couchbase',
-  mongodb: 'MongoDB',
-  neo4j: 'Neo4j',
-  sql: 'SQL',
-};
-
-const R2DBC_DB_OPTIONS = [
-  {
-    value: databaseTypes.POSTGRESQL,
-    name: 'PostgreSQL',
-  },
-  {
-    value: databaseTypes.MYSQL,
-    name: 'MySQL',
-  },
-  {
-    value: databaseTypes.MARIADB,
-    name: 'MariaDB',
-  },
-  {
-    value: databaseTypes.MSSQL,
-    name: 'Microsoft SQL Server',
-  },
-];
-
-const SQL_DB_OPTIONS = [
-  {
-    value: databaseTypes.POSTGRESQL,
-    name: 'PostgreSQL',
-  },
-  {
-    value: databaseTypes.MYSQL,
-    name: 'MySQL',
-  },
-  {
-    value: databaseTypes.MARIADB,
-    name: 'MariaDB',
-  },
-  {
-    value: databaseTypes.ORACLE,
-    name: 'Oracle',
-  },
-  {
-    value: databaseTypes.MSSQL,
-    name: 'Microsoft SQL Server',
-  },
-];
 
 const LANGUAGES = [
   {
@@ -301,7 +236,7 @@ const constants = {
   LOGIN_REGEX,
   LOGIN_REGEX_JS,
   // supported client frameworks
-  SUPPORTED_CLIENT_FRAMEWORKS,
+  SUPPORTED_CLIENT_FRAMEWORKS: { ANGULAR: 'angular', REACT: 'react', VUE: 'vue' },
 
   CLIENT_MAIN_SRC_DIR: `${MAIN_DIR}webapp/`,
   CLIENT_TEST_SRC_DIR: `${TEST_DIR}javascript/`,
@@ -316,15 +251,6 @@ const constants = {
   SERVER_TEST_SRC_DIR: `${TEST_DIR}java/`,
   SERVER_TEST_RES_DIR: `${TEST_DIR}resources/`,
   PRETTIER_EXTENSIONS: 'md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss,vue,svelte,java',
-
-  R2DBC_DB_OPTIONS,
-  SQL_DB_OPTIONS,
-
-  // server related
-  OFFICIAL_DATABASE_TYPE_NAMES,
-
-  // entity related
-  SUPPORTED_VALIDATION_RULES,
 
   JHIPSTER_DOCUMENTATION_URL,
   JHIPSTER_DOCUMENTATION_ARCHIVE_PATH,

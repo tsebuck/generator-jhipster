@@ -45,4 +45,7 @@ export default function cleanupOldServerFiles(generator, application, javaDir, t
   if (application.prodDatabaseTypeMysql && generator.isJhipsterVersionLessThan('7.9.0')) {
     generator.removeFile(`${testResourceDir}testcontainers/mysql/my.cnf`);
   }
+  if (application.prodDatabaseTypeMariadb && generator.isJhipsterVersionLessThan('7.10.0')) {
+    generator.removeFile(`${testResourceDir}testcontainers/mariadb/my.cnf`);
+  }
 }

@@ -138,10 +138,6 @@ export const mariadbFiles = {
         },
       ],
     },
-    {
-      path: SERVER_TEST_RES_DIR,
-      templates: [{ file: 'testcontainers/mariadb/my.cnf', noEjs: true }],
-    },
   ],
 };
 

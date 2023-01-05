@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -32,9 +32,8 @@ import SUB_GENERATORS from './commands.mjs';
 import JHipsterCommand from './jhipster-command.mjs';
 import { CLI_NAME, logger, getCommand, done } from './utils.mjs';
 import { packageJson } from '../lib/index.mjs';
-import generatorUtils from '../generators/utils.cjs';
+import { packageNameToNamespace } from '../generators/utils.mjs';
 
-const { packageNameToNamespace } = generatorUtils;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

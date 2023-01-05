@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -28,10 +28,10 @@ import childProcess from 'child_process';
 import BaseGenerator from '../base/index.mjs';
 
 import { upgradeFiles } from '../cleanup.mjs';
-import constants from '../generator-constants.cjs';
+import { SERVER_MAIN_RES_DIR } from '../generator-constants.mjs';
 import statistics from '../statistics.cjs';
 import { parseBluePrints } from '../../utils/blueprint.mjs';
-import { packageJson as packagejs } from '../../lib/index.mjs';
+import { packageJson } from '../../lib/index.mjs';
 
 /* Constants used throughout */
 const GENERATOR_JHIPSTER = 'generator-jhipster';
@@ -39,7 +39,6 @@ const UPGRADE_BRANCH = 'jhipster_upgrade';
 const GLOBAL_VERSION = 'global';
 const GIT_VERSION_NOT_ALLOW_MERGE_UNRELATED_HISTORIES = '2.9.0';
 const FIRST_CLI_SUPPORTED_VERSION = '4.5.1'; // The first version in which CLI support was added
-const SERVER_MAIN_RES_DIR = constants.SERVER_MAIN_RES_DIR;
 
 /**
  * Executes a Git command using shellJS
@@ -318,7 +317,7 @@ export default class UpgradeGenerator extends BaseGenerator {
         if (this.targetJhipsterVersion) {
           if (this.targetJhipsterVersion === GLOBAL_VERSION) {
             this.originalTargetJhipsterVersion = this.targetJhipsterVersion;
-            this.targetJhipsterVersion = packagejs.version;
+            this.targetJhipsterVersion = packageJson.version;
           }
           this.log(`Upgrading to the target JHipster version: ${this.targetJhipsterVersion}`);
           return;

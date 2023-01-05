@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -26,10 +26,9 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 import { CLI_NAME, logger } from './utils.mjs';
-import generatorUtils from '../generators/utils.cjs';
+import { packageNameToNamespace } from '../generators/utils.mjs';
 import { parseBlueprintInfo, loadBlueprintsFromConfiguration, mergeBlueprints } from '../utils/blueprint.mjs';
 
-const { packageNameToNamespace } = generatorUtils;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

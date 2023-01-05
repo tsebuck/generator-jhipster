@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -27,7 +27,7 @@ import { fork as forkProcess } from 'child_process';
 
 import EnvironmentBuilder from './environment-builder.mjs';
 import { CLI_NAME, GENERATOR_NAME, logger, printSuccess, getOptionAsArgs } from './utils.mjs';
-import { packageJson as packagejs } from '../lib/index.mjs';
+import { packageJson } from '../lib/index.mjs';
 import statistics from '../generators/statistics.cjs';
 import { JHIPSTER_CONFIG_DIR } from '../generators/generator-constants.mjs';
 import { writeConfigFile } from './export-utils.mjs';
@@ -368,7 +368,7 @@ class JDLProcessor {
       skipUserManagement: this.options.skipUserManagement,
       unidirectionalRelationships: this.options.unidirectionalRelationships,
       forceNoFiltering: this.options.forceNoFiltering,
-      generatorVersion: packagejs.version,
+      generatorVersion: packageJson.version,
       skipFileGeneration: true,
     };
 

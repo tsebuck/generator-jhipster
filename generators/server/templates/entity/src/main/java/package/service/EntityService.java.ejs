@@ -1,5 +1,5 @@
 <%#
- Copyright 2013-2022 the original author or authors from the JHipster project.
+ Copyright 2013-2023 the original author or authors from the JHipster project.
 
  This file is part of the JHipster project, see https://www.jhipster.tech/
  for more information.
@@ -164,7 +164,7 @@ public interface <%= entityClass %>Service {
 <%_ } _%>
      */
     <%- reactive ? 'Mono<Void>' : 'void' %> delete(<%= primaryKey.type %> id);
-<%_ if (searchEngine) { _%>
+<%_ if (searchEngineAny) { _%>
 
     /**
      * Search for the <%= entityInstance %> corresponding to the query.

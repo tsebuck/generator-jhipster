@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -24,11 +24,12 @@ import { expect } from 'chai';
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import ApplicationTypes from '../../../jdl/jhipster/application-types.js';
+import { applicationTypes } from '../../../jdl/jhipster/index.mjs';
 import { parseFromFiles } from '../../../jdl/readers/jdl-reader.js';
 import DocumentParser from '../../../jdl/converters/parsed-jdl-to-jdl-object/parsed-jdl-to-jdl-object-converter.js';
 import exportToJDL from '../../../jdl/exporters/jdl-exporter.js';
 
+const { MONOLITH } = applicationTypes;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -40,12 +41,12 @@ describe('integration tests', () => {
     before(() => {
       originalContent = DocumentParser.parseFromConfigurationObject({
         parsedContent: parseFromFiles([path.join(__dirname, '..', 'test-files', 'big_sample.jdl')]),
-        applicationType: ApplicationTypes.MONOLITH,
+        applicationType: MONOLITH,
       });
       exportToJDL(originalContent, 'exported.jdl');
       writtenContent = DocumentParser.parseFromConfigurationObject({
         parsedContent: parseFromFiles(['exported.jdl']),
-        applicationType: ApplicationTypes.MONOLITH,
+        applicationType: MONOLITH,
       });
     });
 

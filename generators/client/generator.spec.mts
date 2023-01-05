@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -25,11 +25,9 @@ import assert from 'assert';
 import { testBlueprintSupport } from '../../test/support/tests.mjs';
 import Generator from './index.mjs';
 import { defaultHelpers as helpers } from '../../test/support/helpers.mjs';
-import defaults from '../generator-defaults.mjs';
 import { testFrameworkTypes } from '../../jdl/jhipster/index.mjs';
 
 const { snakeCase } = lodash;
-const { appDefaultConfig } = defaults;
 const { CYPRESS } = testFrameworkTypes;
 
 const __filename = fileURLToPath(import.meta.url);
@@ -62,7 +60,7 @@ describe(`JHipster ${generator} generator`, () => {
           .withOptions({
             skipInstall: true,
             skipPriorities,
-            defaultLocalConfig: { ...appDefaultConfig, ...options },
+            defaultLocalConfig: options,
           })
           .withMockedGenerators(mockedComposedGenerators);
       });
@@ -86,7 +84,7 @@ describe(`JHipster ${generator} generator`, () => {
           .withOptions({
             skipInstall: true,
             skipPriorities,
-            defaultLocalConfig: { ...appDefaultConfig, ...options },
+            defaultLocalConfig: options,
           })
           .withMockedGenerators(mockedComposedGenerators);
       });
@@ -110,7 +108,7 @@ describe(`JHipster ${generator} generator`, () => {
           .withOptions({
             skipInstall: true,
             skipPriorities,
-            defaultLocalConfig: { ...appDefaultConfig, ...options },
+            defaultLocalConfig: options,
           })
           .withMockedGenerators(mockedComposedGenerators);
       });
@@ -137,7 +135,7 @@ describe(`JHipster ${generator} generator`, () => {
           .withOptions({
             skipInstall: true,
             skipPriorities,
-            defaultLocalConfig: { ...appDefaultConfig, ...options },
+            defaultLocalConfig: options,
           })
           .withMockedGenerators(mockedComposedGenerators);
       });

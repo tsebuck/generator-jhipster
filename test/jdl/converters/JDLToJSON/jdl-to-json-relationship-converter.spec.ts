@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -22,11 +22,10 @@ import { jestExpect } from 'mocha-expect-snapshot';
 import { expect } from 'chai';
 import JDLRelationship from '../../../../jdl/models/jdl-relationship.js';
 import { convert } from '../../../../jdl/converters/jdl-to-json/jdl-to-json-relationship-converter.js';
-import RelationshipTypes from '../../../../jdl/jhipster/relationship-types.js';
-import RelationshipOptions from '../../../../jdl/jhipster/relationship-options.js';
+import { relationshipTypes, relationshipOptions } from '../../../../jdl/jhipster/index.mjs';
 
-const { ONE_TO_ONE, MANY_TO_MANY, MANY_TO_ONE, ONE_TO_MANY } = RelationshipTypes;
-const { JPA_DERIVED_IDENTIFIER } = RelationshipOptions;
+const { ONE_TO_ONE, MANY_TO_MANY, MANY_TO_ONE, ONE_TO_MANY } = relationshipTypes;
+const { JPA_DERIVED_IDENTIFIER } = relationshipOptions;
 
 describe('JDLToJSONRelationshipConverter', () => {
   describe('convert', () => {

@@ -25,7 +25,7 @@ import JDLRelationship from '../../../jdl/models/jdl-relationship.js';
 import { relationshipTypes } from '../../../jdl/jhipster/index.mjs';
 import JDLRelationships from '../../../jdl/models/jdl-relationships.js';
 
-describe('JDLRelationships', () => {
+describe('jdl - JDLRelationships', () => {
   describe('add', () => {
     context('when passing an invalid relationship', () => {
       context('because it is nil', () => {
@@ -446,13 +446,13 @@ describe('JDLRelationships', () => {
 
       it('should use each relationship', () => {
         jestExpect(result).toMatchInlineSnapshot(`
-Array [
-  Object {
+[
+  {
     "from": "Abc",
     "to": "Abc2",
     "type": "OneToOne",
   },
-  Object {
+  {
     "from": "Abc",
     "to": "Abc2",
     "type": "OneToMany",

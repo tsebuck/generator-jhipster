@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JHipster app generator with default config should match snapshot 1`] = `
-Object {
+exports[`generator - app with default config should match snapshot 1`] = `
+{
   "ANGULAR": "angular",
   "CASSANDRA_DRIVER_VERSION": "CASSANDRA_DRIVER_VERSION",
   "CLIENT_WEBPACK_DIR": "webpack/",
@@ -10,13 +10,13 @@ Object {
   "HIBERNATE_VERSION": "HIBERNATE_VERSION",
   "JACKSON_DATABIND_NULLABLE_VERSION": "JACKSON_DATABIND_NULLABLE_VERSION",
   "JACOCO_VERSION": "JACOCO_VERSION",
-  "JAVA_COMPATIBLE_VERSIONS": Array [
+  "JAVA_COMPATIBLE_VERSIONS": [
     "17",
     "18",
     "19",
   ],
   "JAVA_VERSION": "JAVA_VERSION",
-  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
   "MAIN_DIR": "src/main/",
   "REACT": "react",
   "SERVER_MAIN_RES_DIR": "src/main/resources/",
@@ -38,7 +38,7 @@ Object {
   "authenticationUsesCsrf": false,
   "backendType": "Java",
   "baseName": "jhipster",
-  "blueprints": Array [],
+  "blueprints": [],
   "buildTool": "maven",
   "buildToolGradle": false,
   "buildToolMaven": true,
@@ -104,7 +104,7 @@ Object {
   "devJdbcUrl": "jdbc:h2:file:./target/h2db/db/jhipster;DB_CLOSE_DELAY=-1",
   "devLiquibaseUrl": "jdbc:h2:file:\${project.build.directory}/h2db/db/jhipster",
   "devServerPort": 4200,
-  "dockerContainers": Object {
+  "dockerContainers": {
     "cassandra": "cassandra-placeholder",
     "cassandraImage": "cassandra-image-placeholder",
     "cassandraTag": "cassandra-tag-placeholder",
@@ -225,7 +225,7 @@ Object {
     "zookeeperTag": "zookeeper-tag-placeholder",
   },
   "dockerServicesDir": "src/main/docker/",
-  "domains": Array [
+  "domains": [
     "com.mycompany.myapp",
   ],
   "dtoSuffix": "DTO",
@@ -249,7 +249,7 @@ Object {
   "hipster": "jhipster_family_member_3",
   "humanizedBaseName": "JHipster",
   "incrementalChangelog": undefined,
-  "javaDependencies": Object {
+  "javaDependencies": {
     "archunit-junit5": "'ARCHUNIT-JUNIT-5-VERSION'",
     "awaitility": "'AWAITILITY-VERSION'",
     "blockhound-junit-platform": "'BLOCKHOUND-JUNIT-PLATFORM-VERSION'",
@@ -301,7 +301,7 @@ Object {
   "jhipsterPackageJson": Any<Object>,
   "jhipsterVersion": "7.9.3",
   "jwtSecretKey": undefined,
-  "languages": Array [
+  "languages": [
     "en",
     "fr",
   ],
@@ -313,9 +313,9 @@ Object {
   "messageBroker": "no",
   "messageBrokerKafka": false,
   "microfrontend": false,
-  "microfrontends": Array [],
+  "microfrontends": [],
   "nativeLanguage": "en",
-  "nodeDependencies": Object {
+  "nodeDependencies": {
     "concurrently": "CONCURRENTLY_VERSION",
     "husky": "HUSKY_VERSION",
     "lint-staged": "LINT_STAGED_VERSION",
@@ -329,7 +329,7 @@ Object {
   "nodeVersion": "NODE_VERSION",
   "packageFolder": "com/mycompany/myapp/",
   "packageName": "com.mycompany.myapp",
-  "pages": Array [],
+  "pages": [],
   "prettierExtensions": "md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss,java",
   "prettierJava": undefined,
   "prettierTabWidth": 2,
@@ -353,7 +353,7 @@ Object {
   "projectVersion": "0.0.1-SNAPSHOT",
   "reactive": false,
   "rememberMeKey": undefined,
-  "remotes": Array [],
+  "remotes": [],
   "searchEngine": "no",
   "searchEngineAny": false,
   "searchEngineCouchbase": false,
@@ -380,21 +380,21 @@ Object {
   "srcTestJavascript": "src/test/javascript/",
   "srcTestResources": "src/test/resources/",
   "temporaryDir": "target/",
-  "testFrameworks": Array [],
+  "testFrameworks": [],
   "testJavaDir": "src/test/java/",
   "testJavaPackageDir": "src/test/java/com/mycompany/myapp/",
   "testResourceDir": "src/test/resources/",
   "upperFirstCamelCaseBaseName": "Jhipster",
   "user": Any<Object>,
   "webappEnumerationsDir": "src/main/webapp/app/entities/enumerations/",
-  "webappLoginRegExp": "^[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\\\\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$",
+  "webappLoginRegExp": "^[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$",
   "websocket": "no",
   "withAdminUi": true,
 }
 `;
 
-exports[`JHipster app generator with gateway should match snapshot 1`] = `
-Object {
+exports[`generator - app with gateway should match snapshot 1`] = `
+{
   "ANGULAR": "angular",
   "CASSANDRA_DRIVER_VERSION": "CASSANDRA_DRIVER_VERSION",
   "CLIENT_WEBPACK_DIR": "webpack/",
@@ -403,13 +403,13 @@ Object {
   "HIBERNATE_VERSION": "HIBERNATE_VERSION",
   "JACKSON_DATABIND_NULLABLE_VERSION": "JACKSON_DATABIND_NULLABLE_VERSION",
   "JACOCO_VERSION": "JACOCO_VERSION",
-  "JAVA_COMPATIBLE_VERSIONS": Array [
+  "JAVA_COMPATIBLE_VERSIONS": [
     "17",
     "18",
     "19",
   ],
   "JAVA_VERSION": "JAVA_VERSION",
-  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
   "MAIN_DIR": "src/main/",
   "REACT": "react",
   "SERVER_MAIN_RES_DIR": "src/main/resources/",
@@ -431,7 +431,7 @@ Object {
   "authenticationUsesCsrf": false,
   "backendType": "Java",
   "baseName": "jhipster",
-  "blueprints": Array [],
+  "blueprints": [],
   "buildTool": "maven",
   "buildToolGradle": false,
   "buildToolMaven": true,
@@ -498,7 +498,7 @@ Object {
   "devLiquibaseUrl": "jdbc:h2:file:\${project.build.directory}/h2db/db/jhipster",
   "devR2dbcUrl": "r2dbc:h2:file:///./target/h2db/db/jhipster;DB_CLOSE_DELAY=-1",
   "devServerPort": 4200,
-  "dockerContainers": Object {
+  "dockerContainers": {
     "cassandra": "cassandra-placeholder",
     "cassandraImage": "cassandra-image-placeholder",
     "cassandraTag": "cassandra-tag-placeholder",
@@ -619,7 +619,7 @@ Object {
     "zookeeperTag": "zookeeper-tag-placeholder",
   },
   "dockerServicesDir": "src/main/docker/",
-  "domains": Array [
+  "domains": [
     "com.mycompany.myapp",
   ],
   "dtoSuffix": "DTO",
@@ -643,7 +643,7 @@ Object {
   "hipster": "jhipster_family_member_3",
   "humanizedBaseName": "JHipster",
   "incrementalChangelog": undefined,
-  "javaDependencies": Object {
+  "javaDependencies": {
     "archunit-junit5": "'ARCHUNIT-JUNIT-5-VERSION'",
     "awaitility": "'AWAITILITY-VERSION'",
     "blockhound-junit-platform": "'BLOCKHOUND-JUNIT-PLATFORM-VERSION'",
@@ -695,7 +695,7 @@ Object {
   "jhipsterPackageJson": Any<Object>,
   "jhipsterVersion": "7.9.3",
   "jwtSecretKey": Any<String>,
-  "languages": Array [
+  "languages": [
     "en",
     "fr",
   ],
@@ -707,9 +707,9 @@ Object {
   "messageBroker": "no",
   "messageBrokerKafka": false,
   "microfrontend": false,
-  "microfrontends": Array [],
+  "microfrontends": [],
   "nativeLanguage": "en",
-  "nodeDependencies": Object {
+  "nodeDependencies": {
     "concurrently": "CONCURRENTLY_VERSION",
     "husky": "HUSKY_VERSION",
     "lint-staged": "LINT_STAGED_VERSION",
@@ -723,7 +723,7 @@ Object {
   "nodeVersion": "NODE_VERSION",
   "packageFolder": "com/mycompany/myapp/",
   "packageName": "com.mycompany.myapp",
-  "pages": Array [],
+  "pages": [],
   "prettierExtensions": "md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss,java",
   "prettierJava": undefined,
   "prettierTabWidth": 2,
@@ -748,7 +748,7 @@ Object {
   "projectVersion": "0.0.1-SNAPSHOT",
   "reactive": true,
   "rememberMeKey": undefined,
-  "remotes": Array [],
+  "remotes": [],
   "searchEngine": "no",
   "searchEngineAny": false,
   "searchEngineCouchbase": false,
@@ -775,21 +775,21 @@ Object {
   "srcTestJavascript": "src/test/javascript/",
   "srcTestResources": "src/test/resources/",
   "temporaryDir": "target/",
-  "testFrameworks": Array [],
+  "testFrameworks": [],
   "testJavaDir": "src/test/java/",
   "testJavaPackageDir": "src/test/java/com/mycompany/myapp/",
   "testResourceDir": "src/test/resources/",
   "upperFirstCamelCaseBaseName": "Jhipster",
   "user": Any<Object>,
   "webappEnumerationsDir": "src/main/webapp/app/entities/enumerations/",
-  "webappLoginRegExp": "^[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\\\\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$",
+  "webappLoginRegExp": "^[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$",
   "websocket": "no",
   "withAdminUi": true,
 }
 `;
 
-exports[`JHipster app generator with microservice should match snapshot 1`] = `
-Object {
+exports[`generator - app with microservice should match snapshot 1`] = `
+{
   "ANGULAR": "angular",
   "CASSANDRA_DRIVER_VERSION": "CASSANDRA_DRIVER_VERSION",
   "CLIENT_WEBPACK_DIR": "webpack/",
@@ -798,13 +798,13 @@ Object {
   "HIBERNATE_VERSION": "HIBERNATE_VERSION",
   "JACKSON_DATABIND_NULLABLE_VERSION": "JACKSON_DATABIND_NULLABLE_VERSION",
   "JACOCO_VERSION": "JACOCO_VERSION",
-  "JAVA_COMPATIBLE_VERSIONS": Array [
+  "JAVA_COMPATIBLE_VERSIONS": [
     "17",
     "18",
     "19",
   ],
   "JAVA_VERSION": "JAVA_VERSION",
-  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
+  "LOGIN_REGEX": "^(?>[a-zA-Z0-9!$&*+=?^_\`{|}~.-]+@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*)|(?>[_.@A-Za-z0-9-]+)$",
   "MAIN_DIR": "src/main/",
   "REACT": "react",
   "SERVER_MAIN_RES_DIR": "src/main/resources/",
@@ -826,7 +826,7 @@ Object {
   "authenticationUsesCsrf": false,
   "backendType": "Java",
   "baseName": "jhipster",
-  "blueprints": Array [],
+  "blueprints": [],
   "buildTool": "maven",
   "buildToolGradle": false,
   "buildToolMaven": true,
@@ -892,7 +892,7 @@ Object {
   "devJdbcUrl": "jdbc:h2:file:./target/h2db/db/jhipster;DB_CLOSE_DELAY=-1",
   "devLiquibaseUrl": "jdbc:h2:file:\${project.build.directory}/h2db/db/jhipster",
   "devServerPort": undefined,
-  "dockerContainers": Object {
+  "dockerContainers": {
     "cassandra": "cassandra-placeholder",
     "cassandraImage": "cassandra-image-placeholder",
     "cassandraTag": "cassandra-tag-placeholder",
@@ -1013,7 +1013,7 @@ Object {
     "zookeeperTag": "zookeeper-tag-placeholder",
   },
   "dockerServicesDir": "src/main/docker/",
-  "domains": Array [
+  "domains": [
     "com.mycompany.myapp",
   ],
   "dtoSuffix": "DTO",
@@ -1037,7 +1037,7 @@ Object {
   "hipster": "jhipster_family_member_3",
   "humanizedBaseName": "JHipster",
   "incrementalChangelog": undefined,
-  "javaDependencies": Object {
+  "javaDependencies": {
     "archunit-junit5": "'ARCHUNIT-JUNIT-5-VERSION'",
     "awaitility": "'AWAITILITY-VERSION'",
     "blockhound-junit-platform": "'BLOCKHOUND-JUNIT-PLATFORM-VERSION'",
@@ -1089,7 +1089,7 @@ Object {
   "jhipsterPackageJson": Any<Object>,
   "jhipsterVersion": "7.9.3",
   "jwtSecretKey": Any<String>,
-  "languages": Array [
+  "languages": [
     "en",
     "fr",
   ],
@@ -1101,9 +1101,9 @@ Object {
   "messageBroker": "no",
   "messageBrokerKafka": false,
   "microfrontend": false,
-  "microfrontends": Array [],
+  "microfrontends": [],
   "nativeLanguage": "en",
-  "nodeDependencies": Object {
+  "nodeDependencies": {
     "concurrently": "CONCURRENTLY_VERSION",
     "husky": "HUSKY_VERSION",
     "lint-staged": "LINT_STAGED_VERSION",
@@ -1117,7 +1117,7 @@ Object {
   "nodeVersion": "NODE_VERSION",
   "packageFolder": "com/mycompany/myapp/",
   "packageName": "com.mycompany.myapp",
-  "pages": Array [],
+  "pages": [],
   "prettierExtensions": "md,json,yml,html,cjs,mjs,js,ts,tsx,css,scss,java",
   "prettierJava": undefined,
   "prettierTabWidth": 2,
@@ -1141,7 +1141,7 @@ Object {
   "projectVersion": "0.0.1-SNAPSHOT",
   "reactive": false,
   "rememberMeKey": undefined,
-  "remotes": Array [],
+  "remotes": [],
   "searchEngine": "no",
   "searchEngineAny": false,
   "searchEngineCouchbase": false,
@@ -1168,7 +1168,7 @@ Object {
   "srcTestJavascript": "src/test/javascript/",
   "srcTestResources": "src/test/resources/",
   "temporaryDir": "target/",
-  "testFrameworks": Array [],
+  "testFrameworks": [],
   "testJavaDir": "src/test/java/",
   "testJavaPackageDir": "src/test/java/com/mycompany/myapp/",
   "testResourceDir": "src/test/resources/",

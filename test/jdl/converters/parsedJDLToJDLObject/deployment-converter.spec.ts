@@ -20,7 +20,7 @@
 import { jestExpect as expect } from 'mocha-expect-snapshot';
 import { convertDeployments } from '../../../../jdl/converters/parsed-jdl-to-jdl-object/deployment-converter.js';
 
-describe('DeploymentConverter', () => {
+describe('jdl - DeploymentConverter', () => {
   describe('convertDeployments', () => {
     context('when not passing deployments', () => {
       it('should fail', () => {
@@ -43,7 +43,7 @@ describe('DeploymentConverter', () => {
 
       it('should convert them', () => {
         expect(convertedDeployments).toMatchInlineSnapshot(`
-Array [
+[
   JDLDeployment {
     "appsFolders": Set {
       "tata",

@@ -22,7 +22,7 @@ import fs from 'fs';
 import { expect } from 'chai';
 import { readFile, readFiles } from '../../../jdl/readers/file-reader.js';
 
-describe('FileReader', () => {
+describe('jdl - FileReader', () => {
   describe('readFile', () => {
     context('when passing a nil path', () => {
       it('should fail', () => {
@@ -88,7 +88,7 @@ describe('FileReader', () => {
 
       it('should read them', () => {
         jestExpect(content).toMatchInlineSnapshot(`
-Array [
+[
   "Hello...",
   " World!",
 ]

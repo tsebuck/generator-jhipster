@@ -16,7 +16,7 @@ BaseGenerator.log = msg => {
   console.log(msg);
 };
 
-describe('Generator Base Private', () => {
+describe('generator - base-private', () => {
   describe('stripMargin', () => {
     it('should produce correct output without margin', () => {
       const entityFolderName = 'entityFolderName';
@@ -294,7 +294,7 @@ export * from './entityFolderName/entityFileName.state';`;
       it('return SQL', () => {
         jestExpect(Object.fromEntries(Object.values(CommonDBTypes).map(dbType => [dbType, BaseGenerator.getTypescriptType(dbType)])))
           .toMatchInlineSnapshot(`
-Object {
+{
   "AnyBlob": "string",
   "BigDecimal": "number",
   "Blob": "string",

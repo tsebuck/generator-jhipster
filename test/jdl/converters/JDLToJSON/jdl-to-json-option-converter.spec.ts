@@ -33,7 +33,7 @@ import { unaryOptions, binaryOptions } from '../../../../jdl/jhipster/index.mjs'
 import { convert } from '../../../../jdl/converters/jdl-to-json/jdl-to-json-option-converter.js';
 import logger from '../../../../jdl/utils/objects/logger.js';
 
-describe('JDLToJSONOptionConverter', () => {
+describe('jdl - JDLToJSONOptionConverter', () => {
   describe('convert', () => {
     context('when not passing a JDL option holder', () => {
       it('should fail', () => {
@@ -133,7 +133,7 @@ describe('JDLToJSONOptionConverter', () => {
 
         it('should convert the options', () => {
           jestExpect(convertedOptions).toMatchInlineSnapshot(`
-Object {
+{
   "angularJSSuffix": "suffix",
   "clientRootFolder": "../client_root_folder",
   "dto": "mapstruct",
@@ -187,7 +187,7 @@ Object {
         });
         it('should set the service option to serviceClass', () => {
           jestExpect(convertedOptions).toMatchInlineSnapshot(`
-Object {
+{
   "dto": "mapstruct",
   "service": "serviceClass",
 }
@@ -229,7 +229,7 @@ Object {
         });
         it('should set the service option to serviceClass', () => {
           jestExpect(convertedOptions).toMatchInlineSnapshot(`
-Object {
+{
   "jpaMetamodelFiltering": true,
   "service": "serviceClass",
 }
@@ -261,7 +261,7 @@ Object {
 
         it('should prevent the entities from being searched', () => {
           jestExpect(convertedOptions).toMatchInlineSnapshot(`
-Object {
+{
   "searchEngine": false,
 }
 `);

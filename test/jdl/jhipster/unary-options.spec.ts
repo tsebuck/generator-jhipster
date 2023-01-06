@@ -22,7 +22,7 @@ import { jestExpect } from 'mocha-expect-snapshot';
 import { expect } from 'chai';
 import { unaryOptions } from '../../../jdl/jhipster/index.mjs';
 
-describe('UnaryOptions', () => {
+describe('jdl - UnaryOptions', () => {
   describe('exists', () => {
     context('when checking for a valid unary option', () => {
       it('should return true', () => {
@@ -51,7 +51,7 @@ describe('UnaryOptions', () => {
 
       it('should loop over the unary options', () => {
         jestExpect(result).toMatchInlineSnapshot(`
-Array [
+[
   "skipClient",
   "skipServer",
   "noFluentMethod",

@@ -31,7 +31,7 @@ const {
   DeploymentTypes: { DOCKERCOMPOSE, KUBERNETES },
 } = deploymentOptions;
 
-describe('JHipsterDeploymentExporter', () => {
+describe('jdl - JHipsterDeploymentExporter', () => {
   describe('exportDeployments', () => {
     context('when passing invalid parameters', () => {
       context('such as undefined', () => {
@@ -91,12 +91,12 @@ describe('JHipsterDeploymentExporter', () => {
             expect(content['generator-jhipster']).not.to.be.undefined;
             const config = content['generator-jhipster'];
             jestExpect(config).toMatchInlineSnapshot(`
-Object {
-  "appsFolders": Array [
+{
+  "appsFolders": [
     "tata",
     "titi",
   ],
-  "clusteredDbApps": Array [],
+  "clusteredDbApps": [],
   "deploymentType": "docker-compose",
   "directoryPath": "../",
   "dockerRepositoryName": "test",
@@ -133,12 +133,12 @@ Object {
             expect(content['generator-jhipster']).not.to.be.undefined;
             const config = content['generator-jhipster'];
             jestExpect(config).toMatchInlineSnapshot(`
-Object {
-  "appsFolders": Array [
+{
+  "appsFolders": [
     "tata",
     "titi",
   ],
-  "clusteredDbApps": Array [],
+  "clusteredDbApps": [],
   "deploymentType": "kubernetes",
   "directoryPath": "../",
   "dockerPushCommand": "docker push",

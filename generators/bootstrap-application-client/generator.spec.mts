@@ -32,7 +32,7 @@ const __dirname = dirname(__filename);
 const generatorPath = join(__dirname, 'index.mts');
 const generator = basename(__dirname);
 
-describe(`JHipster ${generator} generator`, () => {
+describe(`generator - ${generator}`, () => {
   it('generator-list constant matches folder name', async () => {
     await expect((await import('../generator-list.mjs'))[`GENERATOR_${snakeCase(generator).toUpperCase()}`]).toBe(generator);
   });
@@ -62,13 +62,13 @@ describe(`JHipster ${generator} generator`, () => {
 
       it('should succeed', () => {
         expect(runResult.getSnapshot()).toMatchInlineSnapshot(`
-Object {
-  ".yo-rc.json": Object {
+{
+  ".yo-rc.json": {
     "contents": "{
-  \\"generator-jhipster\\": {
-    \\"baseName\\": \\"jhipster\\",
-    \\"creationTimestamp\\": 946684800000,
-    \\"entities\\": []
+  "generator-jhipster": {
+    "baseName": "jhipster",
+    "creationTimestamp": 946684800000,
+    "entities": []
   }
 }
 ",

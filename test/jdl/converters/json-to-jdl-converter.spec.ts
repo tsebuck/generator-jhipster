@@ -29,7 +29,7 @@ import { convertToJDL, convertSingleContentToJDL } from '../../../jdl/converters
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-describe('JSONToJDLConverter', () => {
+describe('jdl - JSONToJDLConverter', () => {
   describe('convertToJDL', () => {
     context('when there is a yo-rc file in the passed directory', () => {
       let dir;
@@ -66,10 +66,10 @@ describe('JSONToJDLConverter', () => {
     enableHibernateCache true
     enableSwaggerCodegen false
     enableTranslation false
-    gradleEnterpriseHost \\"\\"
+    gradleEnterpriseHost ""
     jhiPrefix jhi
-    jhipsterVersion \\"6.0.1\\"
-    jwtSecretKey \\"HIDDEN\\"
+    jhipsterVersion "6.0.1"
+    jwtSecretKey "HIDDEN"
     languages []
     messageBroker no
     nativeLanguage en
@@ -120,10 +120,10 @@ describe('JSONToJDLConverter', () => {
     enableHibernateCache true
     enableSwaggerCodegen false
     enableTranslation false
-    gradleEnterpriseHost \\"\\"
+    gradleEnterpriseHost ""
     jhiPrefix jhi
-    jhipsterVersion \\"6.0.1\\"
-    jwtSecretKey \\"HIDDEN\\"
+    jhipsterVersion "6.0.1"
+    jwtSecretKey "HIDDEN"
     languages []
     messageBroker no
     nativeLanguage en
@@ -255,10 +255,10 @@ paginate Country with pager
     enableHibernateCache true
     enableSwaggerCodegen false
     enableTranslation false
-    gradleEnterpriseHost \\"\\"
+    gradleEnterpriseHost ""
     jhiPrefix jhi
-    jhipsterVersion \\"6.0.1\\"
-    jwtSecretKey \\"HIDDEN\\"
+    jhipsterVersion "6.0.1"
+    jwtSecretKey "HIDDEN"
     languages []
     messageBroker no
     nativeLanguage en
@@ -293,10 +293,10 @@ application {
     enableHibernateCache true
     enableSwaggerCodegen false
     enableTranslation false
-    gradleEnterpriseHost \\"\\"
+    gradleEnterpriseHost ""
     jhiPrefix jhi
-    jhipsterVersion \\"6.0.1\\"
-    jwtSecretKey \\"HIDDEN\\"
+    jhipsterVersion "6.0.1"
+    jwtSecretKey "HIDDEN"
     languages []
     messageBroker no
     nativeLanguage en
@@ -331,10 +331,10 @@ application {
     enableHibernateCache true
     enableSwaggerCodegen false
     enableTranslation false
-    gradleEnterpriseHost \\"\\"
+    gradleEnterpriseHost ""
     jhiPrefix jhi
-    jhipsterVersion \\"6.0.1\\"
-    jwtSecretKey \\"HIDDEN\\"
+    jhipsterVersion "6.0.1"
+    jwtSecretKey "HIDDEN"
     languages []
     messageBroker no
     nativeLanguage en

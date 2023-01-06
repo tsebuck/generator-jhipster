@@ -27,7 +27,7 @@ const { COUCHBASE } = searchEngineTypes;
 const { MAPSTRUCT } = MapperTypes;
 const { PAGINATION } = PaginationTypes;
 
-describe('OptionConverter', () => {
+describe('jdl - OptionConverter', () => {
   describe('convertOptions', () => {
     context('when not passing options', () => {
       it('should fail', () => {
@@ -104,7 +104,7 @@ describe('OptionConverter', () => {
         });
         it('should convert them', () => {
           expect(convertedOptions).toMatchInlineSnapshot(`
-Array [
+[
   JDLBinaryOption {
     "entityNames": Set {
       "*",
@@ -157,7 +157,7 @@ Array [
         });
         it('should not convert them', () => {
           expect(convertedOptions).toMatchInlineSnapshot(`
-Array [
+[
   JDLBinaryOption {
     "entityNames": Set {
       "*",

@@ -20,7 +20,7 @@
 import { jestExpect as expect } from 'mocha-expect-snapshot';
 import { convertValidations } from '../../../../jdl/converters/parsed-jdl-to-jdl-object/validation-converter.js';
 
-describe('ValidationConverter', () => {
+describe('jdl - ValidationConverter', () => {
   describe('convertValidations', () => {
     context('when not passing validations', () => {
       it('should fail', () => {
@@ -38,7 +38,7 @@ describe('ValidationConverter', () => {
 
         it('should convert it', () => {
           expect(convertedJDLValidations).toMatchInlineSnapshot(`
-Array [
+[
   JDLValidation {
     "name": "min",
     "value": 0,
@@ -111,7 +111,7 @@ Array [
 
         it('should ignore it', () => {
           expect(convertedJDLValidations).toMatchInlineSnapshot(`
-Array [
+[
   JDLValidation {
     "name": "min",
     "value": 0,

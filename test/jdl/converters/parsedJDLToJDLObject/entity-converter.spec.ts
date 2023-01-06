@@ -20,7 +20,7 @@
 import { jestExpect as expect } from 'mocha-expect-snapshot';
 import { convertEntities } from '../../../../jdl/converters/parsed-jdl-to-jdl-object/entity-converter.js';
 
-describe('EntityConverter', () => {
+describe('jdl - EntityConverter', () => {
   describe('convertEntities', () => {
     context('when not passing entities', () => {
       it('should fail', () => {
@@ -49,16 +49,16 @@ describe('EntityConverter', () => {
 
       it('should convert them', () => {
         expect(convertedEntities).toMatchInlineSnapshot(`
-Array [
+[
   JDLEntity {
     "comment": "/** No comment */",
-    "fields": Object {},
+    "fields": {},
     "name": "A",
     "tableName": "A",
   },
   JDLEntity {
     "comment": undefined,
-    "fields": Object {},
+    "fields": {},
     "name": "B",
     "tableName": "b_table",
   },

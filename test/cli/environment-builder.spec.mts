@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -74,14 +74,14 @@ describe('Environment builder', () => {
   describe('_loadBlueprints', () => {
     let envBuilder;
     beforeEach(() => {
-      envBuilder = EnvironmentBuilder.create()._loadBlueprints();
+      envBuilder = EnvironmentBuilder.create([])._loadBlueprints();
     });
     describe('when there is no .yo-rc.json', () => {
       let oldCwd;
       let blueprintsWithVersion;
 
       before(() => {
-        oldCwd = testInTempDir(() => {}, true);
+        oldCwd = testInTempDir(() => {});
         assert(!fs.existsSync('.yo-rc.json'));
       });
       after(() => {
@@ -102,7 +102,7 @@ describe('Environment builder', () => {
       let blueprintsWithVersion;
 
       before(() => {
-        oldCwd = testInTempDir(() => {}, true);
+        oldCwd = testInTempDir(() => {});
         oldArgv = process.argv;
         process.argv = ['--blueprints', 'vuejs,dotnet'];
         assert(!fs.existsSync('.yo-rc.json'));
@@ -128,7 +128,7 @@ describe('Environment builder', () => {
       let blueprintsWithVersion;
 
       before(() => {
-        oldCwd = testInTempDir(() => {}, true);
+        oldCwd = testInTempDir(() => {});
         const yoRcContent = {
           'generator-jhipster': {
             blueprints: [],
@@ -154,7 +154,7 @@ describe('Environment builder', () => {
       let blueprintsWithVersion;
 
       before(() => {
-        oldCwd = testInTempDir(() => {}, true);
+        oldCwd = testInTempDir(() => {});
         const yoRcContent = {
           'generator-jhipster': {
             blueprints: [
@@ -187,7 +187,7 @@ describe('Environment builder', () => {
       let blueprintsWithVersion;
 
       before(() => {
-        oldCwd = testInTempDir(() => {}, true);
+        oldCwd = testInTempDir(() => {});
         oldArgv = process.argv;
 
         assert(!fs.existsSync('.yo-rc.json'));

@@ -272,6 +272,18 @@ Object {
   "generators/docker/templates/template-file-docker.ejs": Object {
     "stateCleared": "modified",
   },
+  "generators/elasticsearch/generator.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/elasticsearch/generator.spec.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/elasticsearch/index.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/elasticsearch/templates/template-file-elasticsearch.ejs": Object {
+    "stateCleared": "modified",
+  },
   "generators/entities/generator.mjs": Object {
     "stateCleared": "modified",
   },
@@ -483,6 +495,18 @@ Object {
     "stateCleared": "modified",
   },
   "generators/maven/templates/template-file-maven.ejs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/mongodb/generator.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/mongodb/generator.spec.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/mongodb/index.mjs": Object {
+    "stateCleared": "modified",
+  },
+  "generators/mongodb/templates/template-file-mongodb.ejs": Object {
     "stateCleared": "modified",
   },
   "generators/openapi-client/generator.mjs": Object {

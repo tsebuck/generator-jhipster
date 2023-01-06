@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -83,6 +83,7 @@ describe('JSONToJDLConverter', () => {
     skipUserManagement true
     testFrameworks []
     websocket no
+    withAdminUi false
   }
 }
 
@@ -136,6 +137,7 @@ describe('JSONToJDLConverter', () => {
     skipUserManagement true
     testFrameworks []
     websocket no
+    withAdminUi false
   }
 
   entities Country, Department, Employee, Job, JobHistory, Location, Region, Task
@@ -270,6 +272,7 @@ paginate Country with pager
     skipUserManagement true
     testFrameworks []
     websocket no
+    withAdminUi false
   }
 
   entities Region
@@ -307,6 +310,7 @@ application {
     skipUserManagement true
     testFrameworks []
     websocket no
+    withAdminUi false
   }
 
   entities Country, Location
@@ -344,6 +348,7 @@ application {
     skipUserManagement true
     testFrameworks []
     websocket no
+    withAdminUi false
   }
 }
 

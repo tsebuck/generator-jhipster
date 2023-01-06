@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -618,6 +618,11 @@ JDLApplication {
         "quoted": false,
         "value": "no",
       },
+      "nativeLanguage": StringJDLApplicationConfigurationOption {
+        "name": "nativeLanguage",
+        "quoted": false,
+        "value": "en",
+      },
       "packageFolder": StringJDLApplicationConfigurationOption {
         "name": "packageFolder",
         "quoted": false,
@@ -644,7 +649,7 @@ JDLApplication {
       },
       "serverPort": IntegerJDLApplicationConfigurationOption {
         "name": "serverPort",
-        "value": "8080",
+        "value": 8080,
       },
       "serviceDiscoveryType": StringJDLApplicationConfigurationOption {
         "name": "serviceDiscoveryType",

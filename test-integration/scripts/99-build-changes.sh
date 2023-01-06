@@ -91,10 +91,13 @@ echo "::group::Check Server"
 git -c color.ui=always diff --exit-code @~1 -- \
   'generators/bootstrap-application-server' \
   'generators/couchbase' \
+  'generators/elasticsearch' \
   'generators/gradle' \
   'generators/kafka' \
   'generators/maven' \
+  'generators/mongodb' \
   'generators/server' \
+  'generators/sql' \
   'generators/database-changelog' \
   'generators/database-changelog-liquibase' \
   || SERVER=true ANY=true

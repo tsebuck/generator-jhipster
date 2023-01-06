@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -24,12 +24,10 @@ import path from 'path';
 
 import BaseGenerator from '../base/index.mjs';
 import prompts from './prompts.mjs';
-import generatorDefaults from '../generator-defaults.mjs';
 import { JHIPSTER_CONFIG_DIR, ANGULAR_DIR } from '../generator-constants.mjs';
-import { applicationTypes, clientFrameworkTypes, reservedKeywords } from '../../jdl/jhipster/index.mjs';
+import { applicationTypes, clientFrameworkTypes, getConfigWithDefaults, reservedKeywords } from '../../jdl/jhipster/index.mjs';
 import { GENERATOR_ENTITIES, GENERATOR_ENTITY } from '../generator-list.mjs';
 
-const { defaultConfig } = generatorDefaults;
 const { GATEWAY, MICROSERVICE } = applicationTypes;
 const { NO: CLIENT_FRAMEWORK_NO, ANGULAR } = clientFrameworkTypes;
 const { isReservedClassName } = reservedKeywords;
@@ -151,7 +149,7 @@ export default class EntityGenerator extends BaseGenerator {
         this.loadClientConfig(undefined, this.application);
         this.loadTranslationConfig(undefined, this.application);
         // Try to load server config from microservice side, falling back to the app config.
-        this.loadServerConfig(_.defaults({}, this.microserviceConfig, this.jhipsterConfig, defaultConfig), this.application);
+        this.loadServerConfig(getConfigWithDefaults({ ...this.jhipsterConfig, ...this.microserviceConfig }), this.application);
 
         this.loadDerivedAppConfig(this.application);
         this.loadDerivedClientConfig(this.application);

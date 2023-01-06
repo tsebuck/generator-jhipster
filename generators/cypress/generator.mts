@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -201,10 +201,7 @@ export default class CypressGenerator extends BaseApplicationGenerator<CypressAp
     return {
       loadPackageJson() {
         // Load common client package.json into dependabotPackageJson
-        _.merge(
-          this.dependabotPackageJson,
-          this.fs.readJSON(this.fetchFromInstalledJHipster('client', 'templates', 'common', 'package.json'))
-        );
+        _.merge(this.dependabotPackageJson, this.fs.readJSON(this.fetchFromInstalledJHipster('client', 'templates', 'package.json')));
       },
 
       configure() {

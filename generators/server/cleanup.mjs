@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -17,9 +17,7 @@
  * limitations under the License.
  */
 import cleanupCassandra from './cleanup-cassandra.mjs';
-import cleanupMongodb from './cleanup-mongodb.mjs';
 import cleanupSql from './cleanup-sql.mjs';
-import cleanupElasticsearch from './cleanup-elasticsearch.mjs';
 import cleanupCacheProvider from './cleanup-cache-provider.mjs';
 import cleanupAngular from './cleanup-angular.mjs';
 import cleanupGradle from './cleanup-gradle.mjs';
@@ -48,15 +46,9 @@ export function cleanupOldServerFiles(generator, application, javaDir, testDir, 
   if (application.databaseTypeCassandra) {
     cleanupCassandra(generator, javaDir, testDir, mainResourceDir, testResourceDir);
   }
-  if (application.databaseTypeMongodb) {
-    cleanupMongodb(generator, javaDir, testDir, mainResourceDir, testResourceDir);
-  }
   cleanupCacheProvider(generator, javaDir, testDir, mainResourceDir, testResourceDir);
   if (application.clientFrameworkAngular) {
     cleanupAngular(generator, javaDir, testDir, mainResourceDir, testResourceDir);
-  }
-  if (application.searchEngineElasticsearch) {
-    cleanupElasticsearch(generator, javaDir, testDir, mainResourceDir, testResourceDir);
   }
   if (application.buildToolGradle) {
     cleanupGradle(generator, javaDir, testDir, mainResourceDir, testResourceDir);

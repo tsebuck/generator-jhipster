@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -103,7 +103,6 @@ export default class EntitiesGenerator extends BaseGenerator {
       if (!this.jhipsterConfig.baseName) {
         this.jhipsterConfig.baseName = this.getDefaultAppName();
       }
-      this.setConfigDefaults(this.getDefaultConfigForApplicationType());
     }
 
     if (!this.options.entities || this.options.entities.length === 0 || this.options.writeEveryEntity) {

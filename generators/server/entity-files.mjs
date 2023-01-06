@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -25,7 +25,6 @@ import { SERVER_MAIN_SRC_DIR, SERVER_MAIN_RES_DIR, TEST_DIR, SERVER_TEST_SRC_DIR
 import { databaseTypes, searchEngineTypes, entityOptions, cacheTypes } from '../../jdl/jhipster/index.mjs';
 
 const { CASSANDRA, COUCHBASE, MONGODB, NEO4J, SQL } = databaseTypes;
-const { ELASTICSEARCH } = searchEngineTypes;
 const { MapperTypes, ServiceTypes } = entityOptions;
 const { EHCACHE, CAFFEINE, INFINISPAN, REDIS } = cacheTypes;
 const { MAPSTRUCT } = MapperTypes;
@@ -157,32 +156,12 @@ export const entityFiles = {
       ],
     },
     {
-      condition: generator => generator.databaseTypeMongodb,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/domain/Entity.java.jhi.spring_data_mongodb',
-          renameTo: generator => `${generator.entityAbsoluteFolder}/domain/${generator.persistClass}.java.jhi.spring_data_mongodb`,
-        },
-      ],
-    },
-    {
       condition: generator => generator.databaseTypeSql && !generator.reactive && generator.enableHibernateCache,
       path: SERVER_MAIN_SRC_DIR,
       templates: [
         {
           file: 'package/domain/Entity.java.jhi.hibernate_cache',
           renameTo: generator => `${generator.entityAbsoluteFolder}/domain/${generator.persistClass}.java.jhi.hibernate_cache`,
-        },
-      ],
-    },
-    {
-      condition: generator => generator.searchEngineElasticsearch,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/domain/Entity.java.jhi.elastic_search',
-          renameTo: generator => `${generator.entityAbsoluteFolder}/domain/${generator.persistClass}.java.jhi.elastic_search`,
         },
       ],
     },
@@ -252,21 +231,6 @@ const filteringReactiveFiles = {
         {
           file: 'package/service/criteria/EntityCriteria.java',
           renameTo: generator => `${generator.entityAbsoluteFolder}/domain/criteria/${generator.entityClass}Criteria.java`,
-        },
-      ],
-    },
-  ],
-};
-
-export const elasticSearchFiles = {
-  elasticSearchFiles: [
-    {
-      condition: generator => generator.searchEngine === ELASTICSEARCH && !generator.embedded,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/repository/search/EntitySearchRepository.java',
-          renameTo: generator => `${generator.entityAbsoluteFolder}/repository/search/${generator.entityClass}SearchRepository.java`,
         },
       ],
     },
@@ -427,7 +391,6 @@ export const serverFiles = {
   ...restFiles,
   ...filteringFiles,
   ...filteringReactiveFiles,
-  ...elasticSearchFiles,
   ...respositoryFiles,
   ...serviceFiles,
   ...dtoFiles,

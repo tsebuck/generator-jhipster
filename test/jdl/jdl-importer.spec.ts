@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -948,12 +948,13 @@ ${entities}`,
               jhiPrefix: 'jhi',
               languages: [],
               messageBroker: 'no',
+              nativeLanguage: 'en',
               packageFolder: 'com/mycompany/myapp',
               packageName: 'com.mycompany.myapp',
               prodDatabaseType: 'postgresql',
               searchEngine: 'no',
               reactive: false,
-              serverPort: '8080',
+              serverPort: 8080,
               serviceDiscoveryType: 'no',
               skipUserManagement: false,
               testFrameworks: [],

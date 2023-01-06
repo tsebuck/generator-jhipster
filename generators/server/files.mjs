@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -32,43 +32,6 @@ const moveToJavaPackageSrcDir = (data, filePath) => `${data.javaPackageSrcDir}${
  * Removes trailing specifiers.
  */
 const moveToJavaPackageTestDir = (data, filePath) => `${data.javaPackageTestDir}${filePath.replace(/_\w*/, '')}`;
-
-export const mongoDbFiles = {
-  serverResource: [
-    {
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/dbmigrations/package-info.java',
-          renameTo: generator => `${generator.javaDir}config/dbmigrations/package-info.java`,
-        },
-      ],
-    },
-    {
-      condition: generator => generator.generateBuiltInUserEntity,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/dbmigrations/InitialSetupMigration.java',
-          renameTo: generator => `${generator.javaDir}config/dbmigrations/InitialSetupMigration.java`,
-        },
-      ],
-    },
-    {
-      path: SERVER_TEST_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/MongoDbTestContainer.java',
-          renameTo: generator => `${generator.testDir}config/MongoDbTestContainer.java`,
-        },
-        {
-          file: 'package/config/EmbeddedMongo.java',
-          renameTo: generator => `${generator.testDir}config/EmbeddedMongo.java`,
-        },
-      ],
-    },
-  ],
-};
 
 export const neo4jFiles = {
   serverResource: [
@@ -821,16 +784,6 @@ export const baseServerFiles = {
         },
       ],
     },
-    {
-      condition: generator => generator.searchEngineElasticsearch,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/ElasticsearchConfiguration.java',
-          renameTo: generator => `${generator.javaDir}config/ElasticsearchConfiguration.java`,
-        },
-      ],
-    },
   ],
   serverJavaDomain: [
     {
@@ -850,16 +803,6 @@ export const baseServerFiles = {
     },
   ],
   serverJavaPackageInfo: [
-    {
-      condition: generator => generator.searchEngineElasticsearch,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/repository/search/package-info.java',
-          renameTo: generator => `${generator.javaDir}repository/search/package-info.java`,
-        },
-      ],
-    },
     {
       path: SERVER_MAIN_SRC_DIR,
       templates: [
@@ -1306,16 +1249,6 @@ export const baseServerFiles = {
       ],
     },
     {
-      condition: generator => generator.authenticationTypeOauth2 && generator.searchEngineElasticsearch,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/repository/search/UserSearchRepository.java',
-          renameTo: generator => `${generator.javaDir}repository/search/UserSearchRepository.java`,
-        },
-      ],
-    },
-    {
       condition: generator => generator.generateUserManagement,
       path: SERVER_MAIN_RES_DIR,
       templates: ['templates/mail/activationEmail.html', 'templates/mail/creationEmail.html', 'templates/mail/passwordResetEmail.html'],
@@ -1366,16 +1299,6 @@ export const baseServerFiles = {
       ],
     },
     {
-      condition: generator => generator.generateBuiltInUserEntity && generator.searchEngineElasticsearch,
-      path: SERVER_MAIN_SRC_DIR,
-      templates: [
-        {
-          file: 'package/repository/search/UserSearchRepository.java',
-          renameTo: generator => `${generator.javaDir}repository/search/UserSearchRepository.java`,
-        },
-      ],
-    },
-    {
       condition: generator =>
         generator.databaseTypeSql ||
         generator.messageBrokerKafka ||
@@ -1405,30 +1328,6 @@ export const baseServerFiles = {
         {
           file: 'package/config/TestContainersSpringContextCustomizerFactory.java',
           renameTo: generator => `${generator.testDir}config/TestContainersSpringContextCustomizerFactory.java`,
-        },
-      ],
-    },
-    {
-      condition: generator => generator.searchEngineElasticsearch,
-      path: SERVER_TEST_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/EmbeddedElasticsearch.java',
-          renameTo: generator => `${generator.testDir}config/EmbeddedElasticsearch.java`,
-        },
-        {
-          file: 'package/config/ElasticsearchTestContainer.java',
-          renameTo: generator => `${generator.testDir}config/ElasticsearchTestContainer.java`,
-        },
-      ],
-    },
-    {
-      condition: ({ searchEngineElasticsearch }) => searchEngineElasticsearch,
-      path: SERVER_TEST_SRC_DIR,
-      templates: [
-        {
-          file: 'package/config/ElasticsearchTestConfiguration.java',
-          renameTo: generator => `${generator.testDir}config/ElasticsearchTestConfiguration.java`,
         },
       ],
     },
@@ -1507,7 +1406,6 @@ export const baseServerFiles = {
 
 export const serverFiles = mergeSections(
   baseServerFiles,
-  addSectionsCondition(mongoDbFiles, context => context.databaseTypeMongodb),
   addSectionsCondition(neo4jFiles, context => context.databaseTypeNeo4j),
   addSectionsCondition(cassandraFiles, context => context.databaseTypeCassandra),
   addSectionsCondition(jwtFiles, context => context.authenticationTypeJwt)

@@ -1,5 +1,5 @@
 /**
- * Copyright 2013-2022 the original author or authors from the JHipster project.
+ * Copyright 2013-2023 the original author or authors from the JHipster project.
  *
  * This file is part of the JHipster project, see https://www.jhipster.tech/
  * for more information.
@@ -80,7 +80,7 @@ describe('JHipsterApplicationExporter', () => {
               packageName: 'com.mathieu.sample',
               prodDatabaseType: MYSQL,
               searchEngine: NO_SEARCH_ENGINE,
-              serverPort: '8080',
+              serverPort: 8080,
               serviceDiscoveryType: NO_SERVICE_DISCOVERY,
               skipClient: false,
               skipServer: false,
@@ -145,7 +145,7 @@ describe('JHipsterApplicationExporter', () => {
               packageName: 'com.mathieu.sample',
               prodDatabaseType: MYSQL,
               searchEngine: NO_SEARCH_ENGINE,
-              serverPort: '8080',
+              serverPort: 8080,
               serviceDiscoveryType: NO_SERVICE_DISCOVERY,
               skipClient: false,
               skipServer: false,
@@ -194,7 +194,7 @@ Object {
     "packageName": "com.mathieu.sample",
     "prodDatabaseType": "mysql",
     "searchEngine": "no",
-    "serverPort": "8080",
+    "serverPort": 8080,
     "serviceDiscoveryType": "no",
     "skipClient": false,
     "skipServer": false,
@@ -249,7 +249,7 @@ Object {
               packageName: 'com.mathieu.toto',
               prodDatabaseType: MYSQL,
               searchEngine: NO_SEARCH_ENGINE,
-              serverPort: '8080',
+              serverPort: 8080,
               serviceDiscoveryType: NO_SERVICE_DISCOVERY,
               skipClient: false,
               skipServer: false,
@@ -286,7 +286,7 @@ Object {
               packageName: 'com.mathieu.titi',
               prodDatabaseType: MYSQL,
               searchEngine: NO_SEARCH_ENGINE,
-              serverPort: '8080',
+              serverPort: 8080,
               serviceDiscoveryType: NO_SERVICE_DISCOVERY,
               skipClient: false,
               skipServer: false,

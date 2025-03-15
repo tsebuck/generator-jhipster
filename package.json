@@ -115,7 +115,7 @@
     "progress": "2.0.3",
     "randexp": "0.5.3",
     "semver": "7.3.8",
-    "shelljs": "0.8.5",
+    "shelljs": "0.9.0",
     "simple-git": "3.16.1",
     "uuid": "9.0.0",
     "winston": "3.8.2",
